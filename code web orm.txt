@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orm Kornnaphat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Serif', serif; 
+      background: linear-gradient(120deg, #FFCCFF, #FFFFFF, #CC99FF);
+      background-size: 200% 200%;
+      animation: bgShift 15s ease infinite;
+      color: #333;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    img {
+      width: 80%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 0 auto 20px auto;
+      display: block;
+    }
+
+    /* Fade in animation with proper fill mode */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .fade-in.delay-1 { animation-delay: 0.2s; }
+    .fade-in.delay-2 { animation-delay: 0.4s; }
+    .fade-in.delay-3 { animation-delay: 0.6s; }
+    .fade-in.delay-4 { animation-delay: 0.8s; }
+    .fade-in.delay-5 { animation-delay: 1s; }
+    .fade-in.delay-6 { animation-delay: 1.2s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .social a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+     transition: all 0.3s ease;
+     font-weight: bold;
+}
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .social a:hover {
+      color: #0077cc;
+      text-shadow: 0 0 8px rgba(255, 64, 129, 0.5);
+      transform: scale(1.1);
+    }
+
+    /* Bong bóng bay như tuyết */
+    .bubble {
+      position: fixed;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.6);
+      animation: floatUp 10s linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0.7; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Tuyết rơi / bong bóng -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      for (let i = 0; i < 25; i++) {
+        const bubble = document.createElement("div");
+        const size = Math.random() * 8 + 4;
+        bubble.className = "bubble";
+        bubble.style.width = size + "px";
+        bubble.style.height = size + "px";
+        bubble.style.left = Math.random() * 100 + "vw";
+        bubble.style.top = Math.random() * 100 + "vh";
+        bubble.style.animationDuration = (Math.random() * 5 + 5) + "s";
+        document.body.appendChild(bubble);
+      }
+    });
+  </script>
+
+  <div class="container">
+    <div class="centered fade-in delay-1">
+      <img src="orm.jpeg" alt="Orm" />
+    </div>
+
+    <h1 class="fade-in delay-2">
+      <div>Orm Kornnaphat</div>
+      <div>(ออม กรณ์นภัส)</div>
+    </h1>
+
+    <p class="fade-in delay-3"><strong>Fullname:</strong> Orm Kornnaphat Sethnaratapong (กรณ์นภัส เศรษฐรัตนพ์)</p>
+    <p class="fade-in delay-3"><strong>Nickname:</strong> OrmKorn</p>
+    <p class="fade-in delay-3"><strong>D.O.B:</strong> 27/05/2002</p>
+    <p class="fade-in delay-3"><strong>Nationality:</strong> Thai</p>
+    <p class="fade-in delay-3"><strong>Languages:</strong> Thai, English</p>
+
+    <div class="info fade-in delay-4">
+      <p><strong>🎓 Education:</strong> Bachelor of Economics (International Program in Economics and Finance) - Srinakharinwirot University</p>
+      <p><strong>🎬 Notable Works:</strong> Only You (2025), The Secret Of Us (2024), Dhevaprom: Laorchan (2024), To the Moon and Back (2023),...</p>
+      <p><strong>🏆 Major Awards:</strong> Leading Girls’ Love Star of the Year (2024), The 50 Influential People 2024, Popular Rising Actress (2023), Paris Fashion Week Fall/Winter 2025: Orm ranked #1 globally in EMV reaching 18.4 million USD,...<p>
+      <p><strong>💼 CEO:</strong> Keep Silent (Fashion Brand)</p>
+      <p><strong>❤️ Partner:</strong> 
+      <a href="https://www.instagram.com/linglingkwong/" target="_blank" style="color: #0099FF; text-decoration: none;">
+    Lingling Kwong <p>
+    </div>
+
+    <div class="social fade-in delay-5">
+      <p><strong>📱 Social:</strong></p> 
+      <a href="https://www.instagram.com/orm.kornnaphat/" target="_blank">Instagram</a>
+      <a href="https://x.com/ormmormm" target="_blank">X</a>
+      <a href="https://www.tiktok.com/@ormkornnaphat?lang=vi-VN" target="_blank">TikTok</a>
+      <a href="https://m.weibo.cn/u/7883901037" target="_blank">Weibo</a>
+    </div>
+
+    <div class="centered fade-in delay-6" style="margin-top: 30px;">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no"
+        src="https://www.youtube.com/embed/JAVLBnd4cdg?start=62&autoplay=1">
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>
